@@ -1,0 +1,24 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<GridPane fx:controller="ASUEpicsStardust.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+
+    <Text text="Enter the information:" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"></Text>
+    <Label text="Voltage:" GridPane.columnIndex="0" GridPane.rowIndex="1"></Label>
+    <TextField fx:id="voltageInput" GridPane.columnIndex="1" GridPane.rowIndex="1"><promptText>Volts</promptText></TextField>
+
+    <Label text="Current:" GridPane.columnIndex="0" GridPane.rowIndex="2"></Label>
+    <TextField fx:id="currentInput" GridPane.columnIndex="1" GridPane.rowIndex="2"><promptText>Current in mA</promptText></TextField>
+
+    <Label text="Panel Area:" GridPane.columnIndex="0" GridPane.rowIndex="3"></Label>
+    <TextField fx:id="panelAreaInput" GridPane.columnIndex="1" GridPane.rowIndex="3"><promptText>Area in m²</promptText></TextField>
+
+    <HBox spacing="10" alignment="BOTTOM_RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="2">
+        <Button text="Calculate" onAction="#handleCalculateButtonPressed"></Button>
+    </HBox>
+
+    <Label fx:id="resultText" GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.columnSpan="2"></Label>
+</GridPane>
